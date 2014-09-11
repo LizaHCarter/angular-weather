@@ -1,0 +1,22 @@
+.row
+  .col-xs-12
+    h2 {{title}}
+.row
+  .col-xs-4
+    form(role='form', novalidate, name='forecastForm', ng-hide='hideZip')
+      .form-group
+        label(for='zip') Enter Zip Code
+        input.form-control(ng-maxlength='5', ng-minlength='5', required, ng-pattern='/[0-9]{5}/', ng-model='zip', type='text', name='zip')
+      button.btn.btn-info(type='submit', ng-show='forecastForm.$valid', ng-click='addZip()') Get 10-Day Forecast
+
+.row(ng-show='forecasts')
+  .col-xs-12
+    .panel.panel-default
+      .panel-body
+        h3(ng-show='showZip') Zip Code: {{zip}} &nbsp
+          .days(ng-repeat='forecast in forecasts')
+            div 
+              h4 {{forecast.title}}
+              img(ng-src='{{forecast.icon_url}}')
+              h5 {{forecast.fcttext}}
+          button.btn.btn-info(type='submit', ng-click='addZip()') Get A Different Zip

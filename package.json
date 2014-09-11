@@ -1,17 +1,17 @@
 {
-  "name": "mean-template",
+  "name": "angular-weather",
   "version": "0.0.0",
-  "description": "The MEAN Template",
+  "description": "Weather API app using Angular",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chyld/mean-template"
+    "url": "https://github.com/lizahcarter/angular-weather"
   },
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "author": "Liza Carter <lizahcarter@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chyld/mean-template/issues"
+    "url": "https://github.com/lizahcarter/angular-weather/issues"
   },
-  "homepage": "https://github.com/chyld/mean-template",
+  "homepage": "https://github.com/lizahcarter/angular-weather",
   "dependencies": {
     "express": "^4.9.0",
     "morgan": "^1.3.0"

@@ -1,0 +1,18 @@
+.row
+  .col-xs-12
+    h2 {{title}}
+.row
+  .col-xs-4
+    form(role='form', novalidate, name='webcamsForm', ng-hide='hideForm')
+      .form-group
+        label(for='zip') Enter Zip Code
+        input.form-control(ng-maxlength='5', ng-minlength='5', required, ng-pattern='/[0-9]{5}/', ng-model='zip', type='text', name='zip')
+      button.btn.btn-info(type='submit', ng-show='webcamsForm.$valid', ng-click='viewCams()') Get Webcams
+
+.row(ng-show='webcams')
+  .col-xs-12
+    .panel.panel-default
+      .panel-body
+        .webcamPhoto(ng-repeat='webcam in webcams')
+          img(ng-src='{{webcam.WIDGETCURRENTIMAGEURL}}')
+
